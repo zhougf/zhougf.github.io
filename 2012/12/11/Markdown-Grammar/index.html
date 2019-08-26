@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人博客,使用说明,工具,markdown,平板文件,教程," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="总结珍理" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/txy_favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="下载思维导图文件 致谢 站在这位 巨人 的肩膀上  作者samrain  直接使用HTML 一般来说直接使用  特殊：块标签必须在前后加上空白，例如：div,table,pre,p  注意：块标签中的MD语法无效，而段标签中有效，例如：span,cite,del   特殊字符处理(&amp;lt;和&amp;amp;) 可以直接使用  在code范围内转换为&amp;amp;lt;和&amp;amp;amp;   段落 一个以上">
+<meta name="keywords" content="个人博客,使用说明,工具,markdown,平板文件,教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法">
+<meta property="og:url" content="https://tianxinyou.github.io/2012/12/11/Markdown-Grammar/index.html">
+<meta property="og:site_name" content="总结珍理">
+<meta property="og:description" content="下载思维导图文件 致谢 站在这位 巨人 的肩膀上  作者samrain  直接使用HTML 一般来说直接使用  特殊：块标签必须在前后加上空白，例如：div,table,pre,p  注意：块标签中的MD语法无效，而段标签中有效，例如：span,cite,del   特殊字符处理(&amp;lt;和&amp;amp;) 可以直接使用  在code范围内转换为&amp;amp;lt;和&amp;amp;amp;   段落 一个以上">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2012-12-11T06:15:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown语法">
+<meta name="twitter:description" content="下载思维导图文件 致谢 站在这位 巨人 的肩膀上  作者samrain  直接使用HTML 一般来说直接使用  特殊：块标签必须在前后加上空白，例如：div,table,pre,p  注意：块标签中的MD语法无效，而段标签中有效，例如：span,cite,del   特殊字符处理(&amp;lt;和&amp;amp;) 可以直接使用  在code范围内转换为&amp;amp;lt;和&amp;amp;amp;   段落 一个以上">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tianxinyou.github.io/2012/12/11/Markdown-Grammar/"/>
+
+
+
+
+
+  <title>Markdown语法 | 总结珍理</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<a href="https://github.com/tianxinyou"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">总结珍理</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学而不思则罔,思而不学则殆</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tianxinyou.github.io/2012/12/11/Markdown-Grammar/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甜心柚">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/txy_avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="总结珍理">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown语法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-12-11T14:15:00+08:00">
+                2012-12-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2012-12-11T14:15:00+08:00">
+                2012-12-11
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/instructions/" itemprop="url" rel="index">
+                    <span itemprop="name">instructions</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://docs.google.com/file/d/0B7UFT4BR96esZTBxR3dOV3JnbHc/edit?usp=sharing" target="_blank" rel="external">下载思维导图文件</a></p>
+<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><ul>
+<li>站在这位 <em><a href="http://markdown.tw/" target="_blank" rel="external">巨人</a></em> 的肩膀上 </li>
+<li>作者<a href="http://samrain.github.com/" target="_blank" rel="external">samrain</a></li>
+</ul>
+<h1 id="直接使用HTML"><a href="#直接使用HTML" class="headerlink" title="直接使用HTML"></a>直接使用HTML</h1><ul>
+<li><p>一般来说直接使用</p>
+</li>
+<li><p>特殊：块标签必须在前后加上空白，例如：<code>div</code>,<code>table</code>,<code>pre</code>,<code>p</code></p>
+</li>
+<li><p>注意：块标签中的MD语法无效，而段标签中有效，例如：<code>span</code>,<code>cite</code>,<code>del</code></p>
+</li>
+</ul>
+<h1 id="特殊字符处理-lt-和-amp"><a href="#特殊字符处理-lt-和-amp" class="headerlink" title="特殊字符处理(&lt;和&amp;)"></a>特殊字符处理(<code>&lt;</code>和<code>&amp;</code>)</h1><ul>
+<li><p>可以直接使用</p>
+</li>
+<li><p>在code范围内转换为<code>&amp;lt;</code>和<code>&amp;amp;</code></p>
+</li>
+</ul>
+<h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><ul>
+<li>一个以上相连接的句子组成</li>
+</ul>
+<h1 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h1><ul>
+<li><p>一个以上的空行会转化为<code>p</code></p>
+</li>
+<li><p>如果想要<code>br</code>换行，必须在行尾加上2个以上空白再回车</p>
+</li>
+</ul>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+<li><p>底线形式(Setext)</p>
+<pre><code>在标题文字后另起一行，写上特殊符号
+
+一阶标题用`=`，二阶标题用`-`
+
+符号数量随便
+</code></pre></li>
+<li><p>Atx形式</p>
+<pre><code>在标题文字行首加入1到6个`#`，代表1到6阶
+
+注意：`#`后必须加一个空格
+</code></pre></li>
+</ul>
+<h1 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h1><ul>
+<li><p>在段落的第一行或者每行前面加上<code>&gt;</code></p>
+</li>
+<li><p>可以有层次，只要根据层数加上不同数量的<code>&gt;</code></p>
+</li>
+<li><p>可以使用其他md语法，比如标题、清单和程序区块等</p>
+</li>
+</ul>
+<h1 id="清单"><a href="#清单" class="headerlink" title="清单"></a>清单</h1><ul>
+<li><p>无序</p>
+<pre><code>在行首添加*或+或-再加上空格
+</code></pre></li>
+<li><p>有序</p>
+<pre><code>数字加英文句号加空格
+
+数字不影响顺序，最好从1开始(方便写作过程中调整语句顺序后忘记修改数字编号)
+</code></pre></li>
+<li><p>可以包含段落</p>
+<pre><code>段落必须缩排4个空格/1个tab
+</code></pre></li>
+<li><p>可以包含引言</p>
+<pre><code>引言的符号`&gt;`必须缩排4个空格/1个tab
+</code></pre></li>
+<li><p>可以包含程序</p>
+<pre><code>必须缩排8个空格/个tab
+</code></pre></li>
+<li><p>如果不想使用分块，但是又必须出现数字+句号，那么在句号前加反斜杠”\”</p>
+</li>
+</ul>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ul>
+<li><p>行内</p>
+<pre><code>直接把文字和URL写在一行中
+
+方括号把文字括起来，后面紧跟小括号把URL括起来
+
+例如：This is [an example](http://example.com/ &quot;Title&quot;)
+</code></pre></li>
+<li><p>参考</p>
+<pre><code>URL统一定义，文字后跟的是ID
+
+第一个方括号把文字括起来，后面紧跟第二个方括号把id括起来
+
+例如：This is [an example][id] reference-style link.
+
+id可以放在文章任意地方(建议放在末尾)，方括号把id括起来+冒号+空白+url+双引号/小括号括起来title内容。如果title太长，可以放到下一行。例如：[id]: http://example.com/ &quot;Optional Title Here&quot;
+
+省略用法:如果文字和id一样，那么在第二个括号中就不要写id了。留一个空括号。例如：[Google][]            [Google]: http://google.com/
+</code></pre></li>
+</ul>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ul>
+<li><p>行内</p>
+<pre><code>感叹号+方括号把图片替代文字括起来+小括号把URL括起来+空格+双引号括起来的title文字
+
+例如：![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre></li>
+<li><p>参考</p>
+<pre><code>感叹号+第一个方括号把文字括起来+第二个方括号把id括起来
+
+例如：![Alt text][id]
+
+id可以放在文章任意地方(建议放在末尾)，方括号把id括起来+冒号+空白+url+双引号/小括号括起来title内容。如果title太长，可以放到下一行。例如：[id]: http://www.taosteel.com/static/images/logoTaosteel.gif &quot;Optional title attribute&quot;
+</code></pre></li>
+</ul>
+<h1 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h1><ul>
+<li>在一行中用三個或以上的星號、減號、底線來建立一個分隔線，行內不能有其他東西。你也可以在星號中間插入空白</li>
+</ul>
+<h1 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h1><ul>
+<li><p>缩排4个空白/1个tab</p>
+</li>
+<li><p>md语法不会被转换</p>
+</li>
+<li><p>如果标记一小段可以用反引号包起来，如果要显示反引号，那么在前后放入一个空格，然后用多个反引号包围</p>
+</li>
+</ul>
+<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><ul>
+<li><p>用<code>*</code>或<code>_</code>包围的文字,符号必须成对出现</p>
+</li>
+<li><p>一对符号转译为<code>em</code>(斜体)，二对符号转译为<code>&lt;strong&gt;</code></p>
+</li>
+</ul>
+<h1 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h1><ul>
+<li>网站链接/邮件地址，用尖括号括起来，例如：<a href="https://drive.google.com" target="_blank" rel="external">https://drive.google.com</a> <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x61;&#109;&#x72;&#97;&#105;&#x6e;&#x68;&#97;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#115;&#x61;&#109;&#x72;&#97;&#105;&#x6e;&#x68;&#97;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a></li>
+</ul>
+<h1 id="用反斜杠来插入特殊符号"><a href="#用反斜杠来插入特殊符号" class="headerlink" title="用反斜杠来插入特殊符号"></a>用反斜杠来插入特殊符号</h1><pre>
+\   反斜線
+`   反引號
+*   星號
+_   底線
+{}  大括號
+[]  方括號
+()  括號
+#   井字號
++   加號
+-   減號
+.   英文句點
+!   驚嘆號
+</pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    甜心柚
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tianxinyou.github.io/2012/12/11/Markdown-Grammar/" title="Markdown语法">https://tianxinyou.github.io/2012/12/11/Markdown-Grammar/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+            <a href="/tags/使用说明/" rel="tag"># 使用说明</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+            <a href="/tags/平板文件/" rel="tag"># 平板文件</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/12/13/See-through-minds-issues-papers/" rel="prev" title="看透人心(问题篇)">
+                看透人心(问题篇) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/txy_avatar.jpg"
+               alt="甜心柚" />
+          <p class="site-author-name" itemprop="name">甜心柚</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's our wits that make us men.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/ || archive">
+            
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">1.</span> <span class="nav-text">致谢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#直接使用HTML"><span class="nav-number">2.</span> <span class="nav-text">直接使用HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊字符处理-lt-和-amp"><span class="nav-number">3.</span> <span class="nav-text">特殊字符处理(<和&)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#段落"><span class="nav-number">4.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#换行"><span class="nav-number">5.</span> <span class="nav-text">换行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">6.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用文字"><span class="nav-number">7.</span> <span class="nav-text">引用文字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#清单"><span class="nav-number">8.</span> <span class="nav-text">清单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">9.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">10.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分隔线"><span class="nav-number">11.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序代码"><span class="nav-number">12.</span> <span class="nav-text">程序代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">13.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动链接"><span class="nav-number">14.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用反斜杠来插入特殊符号"><span class="nav-number">15.</span> <span class="nav-text">用反斜杠来插入特殊符号</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">甜心柚</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -100px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/wanko/wanko.model.json",0.5)</script>
+  
+</body>
+</html>

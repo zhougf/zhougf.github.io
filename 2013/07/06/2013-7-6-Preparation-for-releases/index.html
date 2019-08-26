@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人博客,管理,自我提升,个人管理,方法,技巧,团队管理,工作方法," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="总结珍理" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/txy_favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="下载思维导图文件 本文转自博客Sam的小窝，原文链接为：上线前准备 办公环境准备 PC检查  服务器检查  打印机检查  传真机检查  电话线路检查  网络线路检查  软件客户端检查  备份检查   生产环境准备 服务器检查  网络线路检查  网站检查  软件服务端检查  数据库检查  备份检查  恢复数据演练   文档准备 上线方案  备份方案  恢复方案  应急方案  用户手册   数据准备">
+<meta name="keywords" content="个人博客,管理,自我提升,个人管理,方法,技巧,团队管理,工作方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转：上线前的准备工作">
+<meta property="og:url" content="https://tianxinyou.github.io/2013/07/06/2013-7-6-Preparation-for-releases/index.html">
+<meta property="og:site_name" content="总结珍理">
+<meta property="og:description" content="下载思维导图文件 本文转自博客Sam的小窝，原文链接为：上线前准备 办公环境准备 PC检查  服务器检查  打印机检查  传真机检查  电话线路检查  网络线路检查  软件客户端检查  备份检查   生产环境准备 服务器检查  网络线路检查  网站检查  软件服务端检查  数据库检查  备份检查  恢复数据演练   文档准备 上线方案  备份方案  恢复方案  应急方案  用户手册   数据准备">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2013-07-06T08:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="转：上线前的准备工作">
+<meta name="twitter:description" content="下载思维导图文件 本文转自博客Sam的小窝，原文链接为：上线前准备 办公环境准备 PC检查  服务器检查  打印机检查  传真机检查  电话线路检查  网络线路检查  软件客户端检查  备份检查   生产环境准备 服务器检查  网络线路检查  网站检查  软件服务端检查  数据库检查  备份检查  恢复数据演练   文档准备 上线方案  备份方案  恢复方案  应急方案  用户手册   数据准备">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tianxinyou.github.io/2013/07/06/2013-7-6-Preparation-for-releases/"/>
+
+
+
+
+
+  <title>转：上线前的准备工作 | 总结珍理</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<a href="https://github.com/tianxinyou"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">总结珍理</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学而不思则罔,思而不学则殆</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tianxinyou.github.io/2013/07/06/2013-7-6-Preparation-for-releases/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甜心柚">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/txy_avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="总结珍理">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">转：上线前的准备工作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-07-06T16:00:00+08:00">
+                2013-07-06
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2013-07-06T16:00:00+08:00">
+                2013-07-06
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/working/" itemprop="url" rel="index">
+                    <span itemprop="name">working</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://docs.google.com/file/d/0B7UFT4BR96esdmhNR3FJTDhvTG8/edit?usp=sharing" target="_blank" rel="external">下载思维导图文件</a></p>
+<p>本文转自博客<a href="http://samrain.github.com/" target="_blank" rel="external">Sam的小窝</a>，原文链接为：<a href="http://samrain.github.io/tech/2013/04/23/prepare-for-go-live/" target="_blank" rel="external">上线前准备</a></p>
+<h2 id="办公环境准备"><a href="#办公环境准备" class="headerlink" title="办公环境准备"></a>办公环境准备</h2><ul>
+<li><p>PC检查</p>
+</li>
+<li><p>服务器检查</p>
+</li>
+<li><p>打印机检查</p>
+</li>
+<li><p>传真机检查</p>
+</li>
+<li><p>电话线路检查</p>
+</li>
+<li><p>网络线路检查</p>
+</li>
+<li><p>软件客户端检查</p>
+</li>
+<li><p>备份检查</p>
+</li>
+</ul>
+<h2 id="生产环境准备"><a href="#生产环境准备" class="headerlink" title="生产环境准备"></a>生产环境准备</h2><ul>
+<li><p>服务器检查</p>
+</li>
+<li><p>网络线路检查</p>
+</li>
+<li><p>网站检查</p>
+</li>
+<li><p>软件服务端检查</p>
+</li>
+<li><p>数据库检查</p>
+</li>
+<li><p>备份检查</p>
+</li>
+<li><p>恢复数据演练</p>
+</li>
+</ul>
+<h2 id="文档准备"><a href="#文档准备" class="headerlink" title="文档准备"></a>文档准备</h2><ul>
+<li><p>上线方案</p>
+</li>
+<li><p>备份方案</p>
+</li>
+<li><p>恢复方案</p>
+</li>
+<li><p>应急方案</p>
+</li>
+<li><p>用户手册</p>
+</li>
+</ul>
+<h2 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h2><ul>
+<li><p>字典</p>
+</li>
+<li><p>初始化</p>
+</li>
+<li><p>清空垃圾数据</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    甜心柚
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tianxinyou.github.io/2013/07/06/2013-7-6-Preparation-for-releases/" title="转：上线前的准备工作">https://tianxinyou.github.io/2013/07/06/2013-7-6-Preparation-for-releases/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+            <a href="/tags/管理/" rel="tag"># 管理</a>
+          
+            <a href="/tags/自我提升/" rel="tag"># 自我提升</a>
+          
+            <a href="/tags/个人管理/" rel="tag"># 个人管理</a>
+          
+            <a href="/tags/方法/" rel="tag"># 方法</a>
+          
+            <a href="/tags/技巧/" rel="tag"># 技巧</a>
+          
+            <a href="/tags/团队管理/" rel="tag"># 团队管理</a>
+          
+            <a href="/tags/工作方法/" rel="tag"># 工作方法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/07/02/2013-7-2-How-to-efficiently-communicate-and-exchange/" rel="next" title="如何进行高效沟通/交流">
+                <i class="fa fa-chevron-left"></i> 如何进行高效沟通/交流
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/07/08/2013-7-8-How2solve-wrong-problems-of-tasks-execution-results/" rel="prev" title="怎样解决“任务执行成果错误”的问题">
+                怎样解决“任务执行成果错误”的问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/txy_avatar.jpg"
+               alt="甜心柚" />
+          <p class="site-author-name" itemprop="name">甜心柚</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's our wits that make us men.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/ || archive">
+            
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#办公环境准备"><span class="nav-number">1.</span> <span class="nav-text">办公环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产环境准备"><span class="nav-number">2.</span> <span class="nav-text">生产环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档准备"><span class="nav-number">3.</span> <span class="nav-text">文档准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据准备"><span class="nav-number">4.</span> <span class="nav-text">数据准备</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">甜心柚</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -100px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/wanko/wanko.model.json",0.5)</script>
+  
+</body>
+</html>

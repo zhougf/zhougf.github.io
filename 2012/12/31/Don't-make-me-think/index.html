@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人博客,自我提升,软件研发,设计,web页面设计," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="总结珍理" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/txy_favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="下载思维导图文件 一、web设计的第一原则：别让我思考（第1章）重要：它是可用性第一定律  现状：强迫我们思考的地方多  要求：若不能不言而喻，至少能自我解释  目的：留住用户 二、用户使用web的特征：扫描，满意即可，勉强应付（第2章）不是阅读，是扫描  不是追根究底，是勉强应付  不作最佳选择，是满意即可 解决方案：1、参考广告牌的设计规律，专为扫描设计（第3章）建立清楚的视觉层次越重要越突出">
+<meta name="keywords" content="个人博客,自我提升,软件研发,设计,web页面设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Don&#39;t Make Me Think!">
+<meta property="og:url" content="https://tianxinyou.github.io/2012/12/31/Don't-make-me-think/index.html">
+<meta property="og:site_name" content="总结珍理">
+<meta property="og:description" content="下载思维导图文件 一、web设计的第一原则：别让我思考（第1章）重要：它是可用性第一定律  现状：强迫我们思考的地方多  要求：若不能不言而喻，至少能自我解释  目的：留住用户 二、用户使用web的特征：扫描，满意即可，勉强应付（第2章）不是阅读，是扫描  不是追根究底，是勉强应付  不作最佳选择，是满意即可 解决方案：1、参考广告牌的设计规律，专为扫描设计（第3章）建立清楚的视觉层次越重要越突出">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2012-12-31T06:15:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Don&#39;t Make Me Think!">
+<meta name="twitter:description" content="下载思维导图文件 一、web设计的第一原则：别让我思考（第1章）重要：它是可用性第一定律  现状：强迫我们思考的地方多  要求：若不能不言而喻，至少能自我解释  目的：留住用户 二、用户使用web的特征：扫描，满意即可，勉强应付（第2章）不是阅读，是扫描  不是追根究底，是勉强应付  不作最佳选择，是满意即可 解决方案：1、参考广告牌的设计规律，专为扫描设计（第3章）建立清楚的视觉层次越重要越突出">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tianxinyou.github.io/2012/12/31/Don't-make-me-think/"/>
+
+
+
+
+
+  <title>Don't Make Me Think! | 总结珍理</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<a href="https://github.com/tianxinyou"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">总结珍理</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学而不思则罔,思而不学则殆</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tianxinyou.github.io/2012/12/31/Don't-make-me-think/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甜心柚">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/txy_avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="总结珍理">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Don't Make Me Think!</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-12-31T14:15:00+08:00">
+                2012-12-31
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2012-12-31T14:15:00+08:00">
+                2012-12-31
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/design/" itemprop="url" rel="index">
+                    <span itemprop="name">design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://docs.google.com/file/d/0B7UFT4BR96esN1ZYTF9pSm1PbUE/edit?usp=sharing" target="_blank" rel="external">下载思维导图文件</a></p>
+<h2 id="一、web设计的第一原则：别让我思考"><a href="#一、web设计的第一原则：别让我思考" class="headerlink" title="一、web设计的第一原则：别让我思考"></a>一、web设计的第一原则：别让我思考</h2><h6 id="（第1章）"><a href="#（第1章）" class="headerlink" title="（第1章）"></a>（第1章）</h6><pre><code>重要：它是可用性第一定律
+
+现状：强迫我们思考的地方多
+
+要求：若不能不言而喻，至少能自我解释
+
+目的：留住用户
+</code></pre><h2 id="二、用户使用web的特征：扫描，满意即可，勉强应付"><a href="#二、用户使用web的特征：扫描，满意即可，勉强应付" class="headerlink" title="二、用户使用web的特征：扫描，满意即可，勉强应付"></a>二、用户使用web的特征：扫描，满意即可，勉强应付</h2><h6 id="（第2章）"><a href="#（第2章）" class="headerlink" title="（第2章）"></a>（第2章）</h6><pre><code>不是阅读，是扫描
+
+不是追根究底，是勉强应付
+
+不作最佳选择，是满意即可
+</code></pre><h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><h4 id="1、参考广告牌的设计规律，专为扫描设计"><a href="#1、参考广告牌的设计规律，专为扫描设计" class="headerlink" title="1、参考广告牌的设计规律，专为扫描设计"></a>1、参考广告牌的设计规律，专为扫描设计</h4><h6 id="（第3章）"><a href="#（第3章）" class="headerlink" title="（第3章）"></a>（第3章）</h6><h5 id="建立清楚的视觉层次"><a href="#建立清楚的视觉层次" class="headerlink" title="建立清楚的视觉层次"></a>建立清楚的视觉层次</h5><pre><code>越重要越突出
+逻辑上相关的部分在视线上也相关
+逻辑上包含的部分在视觉上进行嵌套
+尽量使用习惯用法
+把页面划分成有明确定义的区域
+明显标识可点击的地方
+最大限度降低干扰
+</code></pre><h4 id="2、让选择变得无需思考"><a href="#2、让选择变得无需思考" class="headerlink" title="2、让选择变得无需思考"></a>2、让选择变得无需思考</h4><h6 id="（第4章）"><a href="#（第4章）" class="headerlink" title="（第4章）"></a>（第4章）</h6><pre><code>说明：三次无需思考、准确无误的点击=一次需要思考的点击
+关键：尽可能地减少每一次点击的艰难度
+</code></pre><h4 id="3、精简页面文字"><a href="#3、精简页面文字" class="headerlink" title="3、精简页面文字"></a>3、精简页面文字</h4><h6 id="（第5章）"><a href="#（第5章）" class="headerlink" title="（第5章）"></a>（第5章）</h6><h5 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h5><pre><code>降低页面噪声干扰
+突出有用内容
+</code></pre><h5 id="让页面简短，减少滚屏"><a href="#让页面简短，减少滚屏" class="headerlink" title="让页面简短，减少滚屏"></a>让页面简短，减少滚屏</h5><pre><code>简短页面方便阅读
+</code></pre><h5 id="需精简的内容"><a href="#需精简的内容" class="headerlink" title="需精简的内容"></a>需精简的内容</h5><pre><code>欢迎词
+指示说明词
+</code></pre><h2 id="三、基于“无须思考”原则设计web的应用"><a href="#三、基于“无须思考”原则设计web的应用" class="headerlink" title="三、基于“无须思考”原则设计web的应用"></a>三、基于“无须思考”原则设计web的应用</h2><h3 id="1、如何设计导航"><a href="#1、如何设计导航" class="headerlink" title="1、如何设计导航"></a>1、如何设计导航</h3><h6 id="（第6章）"><a href="#（第6章）" class="headerlink" title="（第6章）"></a>（第6章）</h6><h4 id="web浏览的焦虑：缺少物理感觉"><a href="#web浏览的焦虑：缺少物理感觉" class="headerlink" title="web浏览的焦虑：缺少物理感觉"></a>web浏览的焦虑：缺少物理感觉</h4><pre><code>感觉不到大小
+感觉不到方向
+感觉不到位置
+</code></pre><h4 id="用户浏览的一般习惯"><a href="#用户浏览的一般习惯" class="headerlink" title="用户浏览的一般习惯"></a>用户浏览的一般习惯</h4><pre><code>通常是为了寻找某个目标而来
+一般会决定先询问还是先浏览
+如果选择浏览，TA将通过标志的引导在层次结构中穿行
+最后，如果找不到想要的东西，TA会离开
+</code></pre><h4 id="导航是个好东西"><a href="#导航是个好东西" class="headerlink" title="导航是个好东西"></a>导航是个好东西</h4><pre><code>它给了我们一些固定的感觉
+它告诉我们如何使用网站
+它给了我们对网站建造者的信心
+</code></pre><h4 id="一般导航的习惯用法"><a href="#一般导航的习惯用法" class="headerlink" title="一般导航的习惯用法"></a>一般导航的习惯用法</h4><pre><code>默认：标准的外观和位置
+</code></pre><h4 id="全局导航"><a href="#全局导航" class="headerlink" title="全局导航"></a>全局导航</h4><pre><code>出现在每一页，外观和位置一致
+特殊：主页、表单页除外
+</code></pre><h4 id="网站的标志-LOGO"><a href="#网站的标志-LOGO" class="headerlink" title="网站的标志(LOGO)"></a>网站的标志(LOGO)</h4><pre><code>符合网站ID的特征
+位置要最醒目
+</code></pre><h4 id="栏目"><a href="#栏目" class="headerlink" title="栏目"></a>栏目</h4><pre><code>也叫主导航条
+站点层次结构的最高顶层
+</code></pre><h4 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h4><pre><code>定义：指到达网站中不属于内容层次的重要元
+</code></pre><h4 id="“返回主页”"><a href="#“返回主页”" class="headerlink" title="“返回主页”"></a>“返回主页”</h4><pre><code>要始终可见
+</code></pre><h4 id="提供搜索"><a href="#提供搜索" class="headerlink" title="提供搜索"></a>提供搜索</h4><pre><code>构成：按钮，输入框和“搜索”文字
+</code></pre><h4 id="难点：选项设计"><a href="#难点：选项设计" class="headerlink" title="难点：选项设计"></a>难点：选项设计</h4><pre><code>若存在任何混淆搜索范围的可能，写出来
+选项的存在是否必要，再三确定
+给出用户提供选项调整搜索的范围，确实必要时
+</code></pre><h4 id="低层次导航"><a href="#低层次导航" class="headerlink" title="低层次导航"></a>低层次导航</h4><pre><code>样例页面不应被忽视
+</code></pre><h4 id="页面名称"><a href="#页面名称" class="headerlink" title="页面名称"></a>页面名称</h4><pre><code>每个页面都该有
+出现在合适的位置
+名称要和点击的连接一致
+</code></pre><h4 id="指示器"><a href="#指示器" class="headerlink" title="指示器"></a>指示器</h4><pre><code>突出当前的位置
+</code></pre><h4 id="面包屑-层级菜单"><a href="#面包屑-层级菜单" class="headerlink" title="面包屑(层级菜单)"></a>面包屑(层级菜单)</h4><pre><code>定义：显示主页到当前位置的路径
+位置：把它们放在最顶端
+特征：用“&gt;”对层级进行分隔
+加粗：将最后一个元素加粗
+字体：使用小字体
+文字：使用文字“你在这里”
+注意：别把它们作为页面的名称
+标签
+</code></pre><h4 id="如何测试，检验导航设计是否合理-后备箱测试"><a href="#如何测试，检验导航设计是否合理-后备箱测试" class="headerlink" title="如何测试，检验导航设计是否合理(后备箱测试)"></a>如何测试，检验导航设计是否合理(后备箱测试)</h4><pre><code>这是什么网站(LOGO)
+我在哪个网页上(网页名称)
+这个网站的主要栏目有哪些？(栏目清单)
+在这个层次上我有哪些选择？(本页导航)
+我在导航系统的什么位置(“你在这里”指示器)
+我怎么搜索
+</code></pre><h3 id="2、如何设计主页"><a href="#2、如何设计主页" class="headerlink" title="2、如何设计主页"></a>2、如何设计主页</h3><h6 id="（第7章）"><a href="#（第7章）" class="headerlink" title="（第7章）"></a>（第7章）</h6><h4 id="主页一般构成要素有哪些"><a href="#主页一般构成要素有哪些" class="headerlink" title="主页一般构成要素有哪些"></a>主页一般构成要素有哪些</h4><pre><code>站点的标识和使命
+站点层次(内容和功能)
+搜索
+导读(内容推介)
+内容更新
+友情链接
+快捷方式
+让我看到自己正在寻找的东西
+还有我没有寻找的
+告诉我从哪里开始
+建立可信度和责任感
+</code></pre><h4 id="主页设计难点"><a href="#主页设计难点" class="headerlink" title="主页设计难点"></a>主页设计难点</h4><pre><code>每个人都想占一席之地
+想要参与的人太多
+一个尺寸要适合所有人
+</code></pre><h4 id="主页设计第一原则：第一时间，营造网站的整体印象（4-1问检验法）"><a href="#主页设计第一原则：第一时间，营造网站的整体印象（4-1问检验法）" class="headerlink" title="主页设计第一原则：第一时间，营造网站的整体印象（4+1问检验法）"></a>主页设计第一原则：第一时间，营造网站的整体印象（4+1问检验法）</h4><pre><code>这是个什么网站
+这个网站有些什么
+我能在这里做什么
+为什么我在这里，而不是在别的地方
+</code></pre><h4 id="从哪里开始"><a href="#从哪里开始" class="headerlink" title="从哪里开始"></a>从哪里开始</h4><pre><code>从这里开始搜索
+从这里开始扫描
+从这里开始扫描该网站最精彩的内容
+</code></pre><h4 id="如何传达网站的整体印象"><a href="#如何传达网站的整体印象" class="headerlink" title="如何传达网站的整体印象"></a>如何传达网站的整体印象</h4><pre><code>欢迎广告
+</code></pre><h6 id="口号"><a href="#口号" class="headerlink" title="口号"></a>口号</h6><pre><code>清楚，言之有物
+长度适中
+能描述出网站的特点和显而易见的好处
+个性、生动、俏皮
+</code></pre><h6 id="指导原则"><a href="#指导原则" class="headerlink" title="指导原则"></a>指导原则</h6><pre><code>空间尽可能大
+空间别太大
+使命不等于欢迎广告
+用测试检验成果
+</code></pre><h5 id="主页设计的特殊情况"><a href="#主页设计的特殊情况" class="headerlink" title="主页设计的特殊情况"></a>主页设计的特殊情况</h5><h6 id="谨慎使用下拉框"><a href="#谨慎使用下拉框" class="headerlink" title="谨慎使用下拉框"></a>谨慎使用下拉框</h6><pre><code>原因：不够直观、难以扫描、不好控制
+主页导航可以不一样
+</code></pre><h2 id="四、可用性测试相关问题"><a href="#四、可用性测试相关问题" class="headerlink" title="四、可用性测试相关问题"></a>四、可用性测试相关问题</h2><h3 id="1、web设计团队该不该讨论“可用性”"><a href="#1、web设计团队该不该讨论“可用性”" class="headerlink" title="1、web设计团队该不该讨论“可用性”"></a>1、web设计团队该不该讨论“可用性”</h3><h6 id="（第8章）"><a href="#（第8章）" class="headerlink" title="（第8章）"></a>（第8章）</h6><pre><code>现实：如信仰大战般无法验证，无法取得一致意见
+原因：个人喜好的冲突；职位情绪的冲突
+</code></pre><h6 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h6><pre><code>方式：测试，用数据说话
+态度：多讲道理，理智讨论
+共识：web设计无绝对好坏
+结论：不该，浪费时间
+</code></pre><h3 id="2、如何进行可用性测试操作"><a href="#2、如何进行可用性测试操作" class="headerlink" title="2、如何进行可用性测试操作"></a>2、如何进行可用性测试操作</h3><h6 id="（第9章）"><a href="#（第9章）" class="headerlink" title="（第9章）"></a>（第9章）</h6><pre><code>可用性测试现状：测试太少，太迟，要么就是出发点不对。
+</code></pre><h5 id="关于可用性测试的7个观点"><a href="#关于可用性测试的7个观点" class="headerlink" title="关于可用性测试的7个观点"></a>关于可用性测试的7个观点</h5><pre><code>建优秀网站，一定要测试
+测试一个用户比不做测试好一倍
+测试宜早不宜迟
+人们高估了招募用户代表的重要性
+测试的关键是了解你的判断力
+测试是一个迭代的过程
+没有什么比现场用户的反应更重要
+知识点：如何区分焦点小组和可用性测试？
+</code></pre><h5 id="可用性测试具体操作"><a href="#可用性测试具体操作" class="headerlink" title="可用性测试具体操作"></a>可用性测试具体操作</h5><h6 id="测试前的准备"><a href="#测试前的准备" class="headerlink" title="测试前的准备"></a>测试前的准备</h6><pre><code>测试用户数：3~4人，少人多轮
+测试对象：一般站可宽松招募，特殊站针对性调整，招募注意事项(给鼓励、要求简、勿&quot;剧透&quot;、邀亲友)
+测试地点：会议室
+测试主持：性格合适的即可
+测试观察：相关涉众
+测试时间：关键阶段，趁早，经常性
+测试内容：“理解”测试和关键任务测试
+</code></pre><h6 id="测试时的注意事项"><a href="#测试时的注意事项" class="headerlink" title="测试时的注意事项"></a>测试时的注意事项</h6><pre><code>适当闲聊，营造轻松气氛
+对主页的反应
+任务测试
+</code></pre><h6 id="测试后的相关工作"><a href="#测试后的相关工作" class="headerlink" title="测试后的相关工作"></a>测试后的相关工作</h6><pre><code>立即回顾测试结果：分类问题和解决问题
+设计牵一发而动全身，修改需慎重
+</code></pre><h3 id="3、为用户考虑更周到"><a href="#3、为用户考虑更周到" class="headerlink" title="3、为用户考虑更周到"></a>3、为用户考虑更周到</h3><h6 id="（第10章）"><a href="#（第10章）" class="headerlink" title="（第10章）"></a>（第10章）</h6><h5 id="提高好感的方式"><a href="#提高好感的方式" class="headerlink" title="提高好感的方式"></a>提高好感的方式</h5><pre><code>简流程，减步骤
+设计用心
+错误易恢复
+必要时，会道歉
+</code></pre><h5 id="提供好帮助和引导"><a href="#提供好帮助和引导" class="headerlink" title="提供好帮助和引导"></a>提供好帮助和引导</h5><pre><code>呈现给用户想要的
+猪用户的行为：优化操作
+懂用户所疑，及时解答
+提供协助，如打印友好页面
+</code></pre><h5 id="好感存储器"><a href="#好感存储器" class="headerlink" title="好感存储器"></a>好感存储器</h5><pre><code>定义：进入网站时，以好感开始
+特点：它因人而异，因情况而定，可重新填满它，也可能因小失大
+</code></pre><h5 id="降低好感的方式"><a href="#降低好感的方式" class="headerlink" title="降低好感的方式"></a>降低好感的方式</h5><pre><code>隐藏重要信息，询问过多信息
+操作时有障碍，操作错误时有惩罚
+网站看上去不专业，态度敷衍不真诚
+</code></pre><h2 id="五、拓展：可访问性、CSS和你"><a href="#五、拓展：可访问性、CSS和你" class="headerlink" title="五、拓展：可访问性、CSS和你"></a>五、拓展：可访问性、CSS和你</h2><h6 id="（第11章）"><a href="#（第11章）" class="headerlink" title="（第11章）"></a>（第11章）</h6><pre><code>可访问性是什么？对特殊人群所做的特别设计
+</code></pre><h6 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h6><pre><code>为每张图片加alt文本
+让你的表单配合屏幕阅读器
+在每页的最前面加一个&quot;跳转到主页内容&quot;的连接
+让所有的内容都可以通过键盘操作
+尽量不使用JS
+使用客户端的影像地图(image Map)
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    甜心柚
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tianxinyou.github.io/2012/12/31/Don't-make-me-think/" title="Don't Make Me Think!">https://tianxinyou.github.io/2012/12/31/Don't-make-me-think/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+            <a href="/tags/自我提升/" rel="tag"># 自我提升</a>
+          
+            <a href="/tags/软件研发/" rel="tag"># 软件研发</a>
+          
+            <a href="/tags/设计/" rel="tag"># 设计</a>
+          
+            <a href="/tags/web页面设计/" rel="tag"># web页面设计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2012/12/16/See-through-minds-Method-chapter/" rel="next" title="看透人心(方法篇)">
+                <i class="fa fa-chevron-left"></i> 看透人心(方法篇)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/12/31/Examples-of-markdown-grammar/" rel="prev" title="Markdown语法示例">
+                Markdown语法示例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/txy_avatar.jpg"
+               alt="甜心柚" />
+          <p class="site-author-name" itemprop="name">甜心柚</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's our wits that make us men.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/ || archive">
+            
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、web设计的第一原则：别让我思考"><span class="nav-number">1.</span> <span class="nav-text">一、web设计的第一原则：别让我思考</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第1章）"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">（第1章）</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、用户使用web的特征：扫描，满意即可，勉强应付"><span class="nav-number">2.</span> <span class="nav-text">二、用户使用web的特征：扫描，满意即可，勉强应付</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第2章）"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">（第2章）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案："><span class="nav-number">2.1.</span> <span class="nav-text">解决方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、参考广告牌的设计规律，专为扫描设计"><span class="nav-number">2.1.1.</span> <span class="nav-text">1、参考广告牌的设计规律，专为扫描设计</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第3章）"><span class="nav-number">2.1.1.0.1.</span> <span class="nav-text">（第3章）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#建立清楚的视觉层次"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">建立清楚的视觉层次</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、让选择变得无需思考"><span class="nav-number">2.1.2.</span> <span class="nav-text">2、让选择变得无需思考</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第4章）"><span class="nav-number">2.1.2.0.1.</span> <span class="nav-text">（第4章）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、精简页面文字"><span class="nav-number">2.1.3.</span> <span class="nav-text">3、精简页面文字</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第5章）"><span class="nav-number">2.1.3.0.1.</span> <span class="nav-text">（第5章）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#好处"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#让页面简短，减少滚屏"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">让页面简短，减少滚屏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#需精简的内容"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">需精简的内容</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、基于“无须思考”原则设计web的应用"><span class="nav-number">3.</span> <span class="nav-text">三、基于“无须思考”原则设计web的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、如何设计导航"><span class="nav-number">3.1.</span> <span class="nav-text">1、如何设计导航</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第6章）"><span class="nav-number">3.1.0.0.1.</span> <span class="nav-text">（第6章）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web浏览的焦虑：缺少物理感觉"><span class="nav-number">3.1.1.</span> <span class="nav-text">web浏览的焦虑：缺少物理感觉</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户浏览的一般习惯"><span class="nav-number">3.1.2.</span> <span class="nav-text">用户浏览的一般习惯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导航是个好东西"><span class="nav-number">3.1.3.</span> <span class="nav-text">导航是个好东西</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一般导航的习惯用法"><span class="nav-number">3.1.4.</span> <span class="nav-text">一般导航的习惯用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全局导航"><span class="nav-number">3.1.5.</span> <span class="nav-text">全局导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站的标志-LOGO"><span class="nav-number">3.1.6.</span> <span class="nav-text">网站的标志(LOGO)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栏目"><span class="nav-number">3.1.7.</span> <span class="nav-text">栏目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实用工具"><span class="nav-number">3.1.8.</span> <span class="nav-text">实用工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“返回主页”"><span class="nav-number">3.1.9.</span> <span class="nav-text">“返回主页”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提供搜索"><span class="nav-number">3.1.10.</span> <span class="nav-text">提供搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#难点：选项设计"><span class="nav-number">3.1.11.</span> <span class="nav-text">难点：选项设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#低层次导航"><span class="nav-number">3.1.12.</span> <span class="nav-text">低层次导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面名称"><span class="nav-number">3.1.13.</span> <span class="nav-text">页面名称</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指示器"><span class="nav-number">3.1.14.</span> <span class="nav-text">指示器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面包屑-层级菜单"><span class="nav-number">3.1.15.</span> <span class="nav-text">面包屑(层级菜单)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何测试，检验导航设计是否合理-后备箱测试"><span class="nav-number">3.1.16.</span> <span class="nav-text">如何测试，检验导航设计是否合理(后备箱测试)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、如何设计主页"><span class="nav-number">3.2.</span> <span class="nav-text">2、如何设计主页</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第7章）"><span class="nav-number">3.2.0.0.1.</span> <span class="nav-text">（第7章）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页一般构成要素有哪些"><span class="nav-number">3.2.1.</span> <span class="nav-text">主页一般构成要素有哪些</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页设计难点"><span class="nav-number">3.2.2.</span> <span class="nav-text">主页设计难点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页设计第一原则：第一时间，营造网站的整体印象（4-1问检验法）"><span class="nav-number">3.2.3.</span> <span class="nav-text">主页设计第一原则：第一时间，营造网站的整体印象（4+1问检验法）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从哪里开始"><span class="nav-number">3.2.4.</span> <span class="nav-text">从哪里开始</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何传达网站的整体印象"><span class="nav-number">3.2.5.</span> <span class="nav-text">如何传达网站的整体印象</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#口号"><span class="nav-number">3.2.5.0.1.</span> <span class="nav-text">口号</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#指导原则"><span class="nav-number">3.2.5.0.2.</span> <span class="nav-text">指导原则</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主页设计的特殊情况"><span class="nav-number">3.2.5.1.</span> <span class="nav-text">主页设计的特殊情况</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#谨慎使用下拉框"><span class="nav-number">3.2.5.1.1.</span> <span class="nav-text">谨慎使用下拉框</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、可用性测试相关问题"><span class="nav-number">4.</span> <span class="nav-text">四、可用性测试相关问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、web设计团队该不该讨论“可用性”"><span class="nav-number">4.1.</span> <span class="nav-text">1、web设计团队该不该讨论“可用性”</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第8章）"><span class="nav-number">4.1.0.0.1.</span> <span class="nav-text">（第8章）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解决方法："><span class="nav-number">4.1.0.0.2.</span> <span class="nav-text">解决方法：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、如何进行可用性测试操作"><span class="nav-number">4.2.</span> <span class="nav-text">2、如何进行可用性测试操作</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第9章）"><span class="nav-number">4.2.0.0.1.</span> <span class="nav-text">（第9章）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于可用性测试的7个观点"><span class="nav-number">4.2.0.1.</span> <span class="nav-text">关于可用性测试的7个观点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#可用性测试具体操作"><span class="nav-number">4.2.0.2.</span> <span class="nav-text">可用性测试具体操作</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#测试前的准备"><span class="nav-number">4.2.0.2.1.</span> <span class="nav-text">测试前的准备</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#测试时的注意事项"><span class="nav-number">4.2.0.2.2.</span> <span class="nav-text">测试时的注意事项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#测试后的相关工作"><span class="nav-number">4.2.0.2.3.</span> <span class="nav-text">测试后的相关工作</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、为用户考虑更周到"><span class="nav-number">4.3.</span> <span class="nav-text">3、为用户考虑更周到</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第10章）"><span class="nav-number">4.3.0.0.1.</span> <span class="nav-text">（第10章）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#提高好感的方式"><span class="nav-number">4.3.0.1.</span> <span class="nav-text">提高好感的方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#提供好帮助和引导"><span class="nav-number">4.3.0.2.</span> <span class="nav-text">提供好帮助和引导</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#好感存储器"><span class="nav-number">4.3.0.3.</span> <span class="nav-text">好感存储器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#降低好感的方式"><span class="nav-number">4.3.0.4.</span> <span class="nav-text">降低好感的方式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、拓展：可访问性、CSS和你"><span class="nav-number">5.</span> <span class="nav-text">五、拓展：可访问性、CSS和你</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（第11章）"><span class="nav-number">5.0.0.0.1.</span> <span class="nav-text">（第11章）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#怎么做"><span class="nav-number">5.0.0.0.2.</span> <span class="nav-text">怎么做</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">甜心柚</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -100px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/wanko/wanko.model.json",0.5)</script>
+  
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人博客,使用说明,工具,自我提升,方法,技巧,技术,Vmware,操作系统," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="总结珍理" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/txy_favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="名词解释——VM：虚拟机现在体现于一个叫做VM/ESA的产品里，它广泛的安装在IBM的主机操作系统里，包括MVS和会话监视系统（CMS），所以每个操作系统看上去像有它自己完整的软件和硬件资源系统（数据存储，通信，处理器等等）。也就是说VM给每个操作系统一个自己的&amp;quot;虚拟机&amp;quot;。VM和CMS在许多大公司里很流行，他们把它当成一个能让大量交互式用户通信或者开发并且能同时运行程序的系统。">
+<meta name="keywords" content="个人博客,使用说明,工具,自我提升,方法,技巧,技术,Vmware,操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VMware虚拟机的三种联网方法及原理">
+<meta property="og:url" content="https://tianxinyou.github.io/2013/02/05/2013-2-5-3VM-networking-methods-and-principles/index.html">
+<meta property="og:site_name" content="总结珍理">
+<meta property="og:description" content="名词解释——VM：虚拟机现在体现于一个叫做VM/ESA的产品里，它广泛的安装在IBM的主机操作系统里，包括MVS和会话监视系统（CMS），所以每个操作系统看上去像有它自己完整的软件和硬件资源系统（数据存储，通信，处理器等等）。也就是说VM给每个操作系统一个自己的&amp;quot;虚拟机&amp;quot;。VM和CMS在许多大公司里很流行，他们把它当成一个能让大量交互式用户通信或者开发并且能同时运行程序的系统。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/Ywd3k.jpg">
+<meta property="og:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/tva8E.jpg">
+<meta property="og:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/1pC2e.jpg">
+<meta property="og:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/ZvvYb.jpg">
+<meta property="og:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/7uQZ1.jpg">
+<meta property="og:updated_time" content="2013-02-05T06:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VMware虚拟机的三种联网方法及原理">
+<meta name="twitter:description" content="名词解释——VM：虚拟机现在体现于一个叫做VM/ESA的产品里，它广泛的安装在IBM的主机操作系统里，包括MVS和会话监视系统（CMS），所以每个操作系统看上去像有它自己完整的软件和硬件资源系统（数据存储，通信，处理器等等）。也就是说VM给每个操作系统一个自己的&amp;quot;虚拟机&amp;quot;。VM和CMS在许多大公司里很流行，他们把它当成一个能让大量交互式用户通信或者开发并且能同时运行程序的系统。">
+<meta name="twitter:image" content="https://tianxinyou.github.io/blogImages/20130205-3VM-networking-methods-and-principles/Ywd3k.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tianxinyou.github.io/2013/02/05/2013-2-5-3VM-networking-methods-and-principles/"/>
+
+
+
+
+
+  <title>VMware虚拟机的三种联网方法及原理 | 总结珍理</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<a href="https://github.com/tianxinyou"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">总结珍理</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学而不思则罔,思而不学则殆</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tianxinyou.github.io/2013/02/05/2013-2-5-3VM-networking-methods-and-principles/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甜心柚">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/txy_avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="总结珍理">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">VMware虚拟机的三种联网方法及原理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-02-05T14:00:00+08:00">
+                2013-02-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2013-02-05T14:00:00+08:00">
+                2013-02-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index">
+                    <span itemprop="name">technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h6 id="名词解释——VM："><a href="#名词解释——VM：" class="headerlink" title="名词解释——VM："></a>名词解释——VM：</h6><pre><code>虚拟机现在体现于一个叫做VM/ESA的产品里，它广泛的安装在IBM的主机操作系统里，包括MVS和会话监视系统（CMS），所以每个操作系统看上去像有它自己完整的软件和硬件资源系统（数据存储，通信，处理器等等）。也就是说VM给每个操作系统一个自己的&quot;虚拟机&quot;。VM和CMS在许多大公司里很流行，他们把它当成一个能让大量交互式用户通信或者开发并且能同时运行程序的系统。许多公司使用MVS来做商业应用而把VM作为程序开发和用户通信环境。
+</code></pre><h2 id="一、Brigde——桥接-：默认使用VMnet0"><a href="#一、Brigde——桥接-：默认使用VMnet0" class="headerlink" title="一、Brigde——桥接  ：默认使用VMnet0"></a>一、Brigde——桥接  ：默认使用VMnet0</h2><h4 id="1、原理："><a href="#1、原理：" class="headerlink" title="1、原理："></a>1、原理：</h4><pre><code>Bridge桥&quot;就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在&quot;桥&quot;上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理网卡应该处于同一IP网段  当然要保证两个局域网没有冲突的IP.
+VMWare 的桥也是同样的道理，只不过，本来作为硬件的一块网卡，现在由VMWare软件虚拟了！当采用桥接时，VMWare会虚拟一块网卡和真正的物理网卡就行桥接，这样，发到物理网卡的所有数据包就到了VMWare虚拟机，而由VMWare发出的数据包也会通过桥从物理网卡的那端发出。
+所以，如果物理网卡可以上网，那么桥接的软网卡也没有问题了，这就是桥接上网的原理了。  　　
+</code></pre><h4 id="2、联网方式："><a href="#2、联网方式：" class="headerlink" title="2、联网方式："></a>2、联网方式：</h4><pre><code>这一种联网方式最简单，在局域网内，你的主机是怎么联网的，你在虚拟机里就怎么连网。把虚拟机看成局域网内的另一台电脑就行了！
+</code></pre><h6 id="提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。"><a href="#提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。" class="headerlink" title="提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。"></a>提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。</h6><h2 id="二、NAT——网络地址转换-：默认使用VMnet8"><a href="#二、NAT——网络地址转换-：默认使用VMnet8" class="headerlink" title="二、NAT——网络地址转换  ：默认使用VMnet8"></a>二、NAT——网络地址转换  ：默认使用VMnet8</h2><h4 id="1、原理：-1"><a href="#1、原理：-1" class="headerlink" title="1、原理："></a>1、原理：</h4><pre><code>NAT 是  Network  address  translate的简称。NAT技术应用在internet网关和路由器上，比如192.168.0.123这个地址要访问internet，它的数据包就要通过一个网关或者路由器，而网关或者路由器拥有一个能访问internet的ip地址，这样的网关和路由器就要在收发数据包时，对数据包的IP协议层数据进行更改（即  NAT），以使私有网段的主机能够顺利访问internet。此技术解决了IP地址稀缺的问题。同样的私有IP可以网关NAT  上网。
+VMWare的NAT上网也是同样的道理，它在主机和虚拟机之间用软件伪造出一块网卡，这块网卡和虚拟机的ip处于一个地址段。同时，在这块网卡和主机的网络接口之间进行NAT。虚拟机发出的每一块数据包都会经过虚拟网卡，然后NAT，然后由主机的接口发出。
+虚拟网卡和虚拟机处于一个地址段，虚拟机和主机不同一个地址段，主机相当于虚拟机的网关，所以虚拟机能ping到主机的IP，但是主机ping不到虚拟机的IP。
+</code></pre><p>　　　　</p>
+<h4 id="2、联网方式：-1"><a href="#2、联网方式：-1" class="headerlink" title="2、联网方式："></a>2、联网方式：</h4><h6 id="方法1、动态IP地址。"><a href="#方法1、动态IP地址。" class="headerlink" title="方法1、动态IP地址。"></a>方法1、动态IP地址。</h6><pre><code>主机是静态IP或动态IP，都无所谓，将虚拟机设置成使用DHCP方式上网,Windows下选择“自动获取IP“，linux下开启DHCP服务即可。（这种方法最简单，不用过多的设置，但要在VMware中进行“编辑→虚拟网络设置”，将NAT和DHCP都开启了。一般NAT默认开启，DHCP默认关闭）
+</code></pre><p>　　</p>
+<h6 id="方法2、静态IP地址。"><a href="#方法2、静态IP地址。" class="headerlink" title="方法2、静态IP地址。"></a>方法2、静态IP地址。</h6><pre><code>如果不想使用DHCP，也可以手动设置：    
+IP设置与vmnet1同网段,网关设置成vmnet8的网关（在“虚拟网络设置”里的Net选项卡里能找到Gateway）通常是xxx.xxx.xxx.2。
+子网掩码设置与VMnet8相同（设置好IP地址后，子网掩码自动生成）
+DNS设置与主机相同。
+例如：主机IP是10.70.54.31,设置虚拟机IP为10.70.54.22。Netmask,Gateway,DNS都与主机相同即可实现  虚拟机  ---主机  虚拟机&lt;----&gt;互联网通信。
+</code></pre><h6 id="提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。"><a href="#提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。" class="headerlink" title="提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。"></a>提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。</h6><h2 id="三、Host-Only——私有网络共享主机：默认使用VMnet1"><a href="#三、Host-Only——私有网络共享主机：默认使用VMnet1" class="headerlink" title="三、Host-Only——私有网络共享主机：默认使用VMnet1"></a>三、Host-Only——私有网络共享主机：默认使用VMnet1</h2><h4 id="1、原理：-2"><a href="#1、原理：-2" class="headerlink" title="1、原理："></a>1、原理：</h4><pre><code>提供的是主机和虚拟机之间的网络互访。只想让虚拟机和主机之间有数据交换，而不想让虚拟机访问Internet，就要采用这个设置了。
+Host-only的条件下，VMWare在真正的Windows系统中，建立一块软网卡。这块网卡可以在网络连接中看到，一般是VMNET1，这块网卡的作用就是使Windows看到虚拟机的IP。
+</code></pre><h4 id="2、联网方法："><a href="#2、联网方法：" class="headerlink" title="2、联网方法："></a>2、联网方法：</h4><h6 id="方法1、动态IP地址。-1"><a href="#方法1、动态IP地址。-1" class="headerlink" title="方法1、动态IP地址。"></a>方法1、动态IP地址。</h6><pre><code>像上面那样开启DHCP后，虚拟机直接自动获取IP地址和DNS。就可以和主机相连了。当然，还要进行一些局域网共享的操作，这里不再赘述。
+</code></pre><h6 id="方法2、静态IP地址。-1"><a href="#方法2、静态IP地址。-1" class="headerlink" title="方法2、静态IP地址。"></a>方法2、静态IP地址。</h6><pre><code>也可以手动设置，将虚拟机IP设置与VMnet1同网段,网关设置成VMnet1的IP,其余设置与VMnet1相同,DNS设置与主机相同。
+例如：VMnet1  IP:172.16.249.1        Gateway  :172.16.249.2
+</code></pre><p>　　那么虚拟机  IP:172.16.249.100        Gateway:  172.16.249.2<br>    这样      虚拟机&lt;—&gt;主机              可以通信<br>    但是        虚拟机&lt;—&gt;互联网      无法通信</p>
+<h6 id="提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。"><a href="#提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。" class="headerlink" title="提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。"></a>提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。</h6><h2 id="实例：winxp虚拟机联网的简单方法"><a href="#实例：winxp虚拟机联网的简单方法" class="headerlink" title="实例：winxp虚拟机联网的简单方法"></a>实例：winxp虚拟机联网的简单方法</h2><h6 id="某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？"><a href="#某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？" class="headerlink" title="某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？"></a>某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？</h6><pre><code>1.首先将VM的网卡net8启用：
+</code></pre><p><img src="/blogImages/20130205-3VM-networking-methods-and-principles/Ywd3k.jpg" alt="" title="VM的网卡net8启用"></p>
+<pre><code>2.然后将VM的网卡设置为VMnet8（NAT）：
+</code></pre><p><img src="/blogImages/20130205-3VM-networking-methods-and-principles/tva8E.jpg" alt="" title="设置为VMnet8"></p>
+<pre><code>3.将PC的可以上网的网卡共享：
+</code></pre><p><img src="/blogImages/20130205-3VM-networking-methods-and-principles/1pC2e.jpg" alt="" title="网卡共享"></p>
+<pre><code>要勾上允许其他网络用户通过此计算机的intenet连接来连接，并选择VMnet8。
+
+4.设置VMnet8网卡的默认网关为本地PC可以上网的网卡的IP地址：
+</code></pre><p><img src="/blogImages/20130205-3VM-networking-methods-and-principles/ZvvYb.jpg" alt="" title="网关为网卡的IP地址"></p>
+<pre><code>pc可以上网的网卡的IP地址为172.18.216.77，VMnet8的地址为192.168.0.1
+
+5.设置VM中网卡的地址为192.168.0.*网段，默认网关为192.168.0.1，并配置好DNS。
+</code></pre><p><img src="/blogImages/20130205-3VM-networking-methods-and-principles/7uQZ1.jpg" alt="" title="网关DNS"></p>
+<pre><code>这样就算设置完成了，在VM中访问网络时，先根据默认网关192.168.0.1，找到了VMnet8网卡，然后根据VMnet8网卡的默认网关172.18.216.77找到了可以上网的网卡，而该网卡已经共享上网，因此就实现了VM共享主机的IP地址上网了。
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    甜心柚
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tianxinyou.github.io/2013/02/05/2013-2-5-3VM-networking-methods-and-principles/" title="VMware虚拟机的三种联网方法及原理">https://tianxinyou.github.io/2013/02/05/2013-2-5-3VM-networking-methods-and-principles/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+            <a href="/tags/使用说明/" rel="tag"># 使用说明</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+            <a href="/tags/自我提升/" rel="tag"># 自我提升</a>
+          
+            <a href="/tags/方法/" rel="tag"># 方法</a>
+          
+            <a href="/tags/技巧/" rel="tag"># 技巧</a>
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Vmware/" rel="tag"># Vmware</a>
+          
+            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/02/04/2013-2-4-5qs-of-tasks-executor-2complete-transmutation/" rel="next" title="让任务执行者蜕变的5个自问">
+                <i class="fa fa-chevron-left"></i> 让任务执行者蜕变的5个自问
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/03/02/2013-3-2-Parent-effectiveness-training-manual/" rel="prev" title="父母效能训练手册">
+                父母效能训练手册 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/txy_avatar.jpg"
+               alt="甜心柚" />
+          <p class="site-author-name" itemprop="name">甜心柚</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's our wits that make us men.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/ || archive">
+            
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#名词解释——VM："><span class="nav-number">1.</span> <span class="nav-text">名词解释——VM：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Brigde——桥接-：默认使用VMnet0"><span class="nav-number"></span> <span class="nav-text">一、Brigde——桥接  ：默认使用VMnet0</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、原理："><span class="nav-number"></span> <span class="nav-text">1、原理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、联网方式："><span class="nav-number"></span> <span class="nav-text">2、联网方式：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。"><span class="nav-number">1.</span> <span class="nav-text">提示：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、NAT——网络地址转换-：默认使用VMnet8"><span class="nav-number"></span> <span class="nav-text">二、NAT——网络地址转换  ：默认使用VMnet8</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、原理：-1"><span class="nav-number"></span> <span class="nav-text">1、原理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、联网方式：-1"><span class="nav-number"></span> <span class="nav-text">2、联网方式：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方法1、动态IP地址。"><span class="nav-number">1.</span> <span class="nav-text">方法1、动态IP地址。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法2、静态IP地址。"><span class="nav-number">2.</span> <span class="nav-text">方法2、静态IP地址。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。"><span class="nav-number">3.</span> <span class="nav-text">提示：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Host-Only——私有网络共享主机：默认使用VMnet1"><span class="nav-number"></span> <span class="nav-text">三、Host-Only——私有网络共享主机：默认使用VMnet1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、原理：-2"><span class="nav-number"></span> <span class="nav-text">1、原理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、联网方法："><span class="nav-number"></span> <span class="nav-text">2、联网方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方法1、动态IP地址。-1"><span class="nav-number">1.</span> <span class="nav-text">方法1、动态IP地址。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法2、静态IP地址。-1"><span class="nav-number">2.</span> <span class="nav-text">方法2、静态IP地址。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。"><span class="nav-number">3.</span> <span class="nav-text">提示：Host-only技术只用于主机和虚拟机互访，于访问internet无关。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例：winxp虚拟机联网的简单方法"><span class="nav-number"></span> <span class="nav-text">实例：winxp虚拟机联网的简单方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？"><span class="nav-number">1.</span> <span class="nav-text">某pc有一个IP地址是可以访问网络的，那么怎样让VM能够共享pc的IP地址，也能上网呢？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">甜心柚</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -100px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/wanko/wanko.model.json",0.5)</script>
+  
+</body>
+</html>

@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://tianxinyou.github.io/2018/04/12/about/</loc>
-    <lastmod>2018-04-12T15:08:45.139Z</lastmod>
+    <loc>https://tianxinyou.github.io/2019/07/04/about/</loc>
+    <lastmod>2018-04-12T15:08:45.130Z</lastmod>
     <data>
         <display>
         <title>谢谢打赏</title>
-        <pubTime>2018-04-12T15:08:45.139Z</pubTime>
+        <pubTime>2019-07-04T12:02:30.000Z</pubTime>
         
         <tag>个人博客</tag>
          
@@ -55,7 +55,7 @@
     
   <url>
     <loc>https://tianxinyou.github.io/2013/02/01/2013-2-1-Win-in-today/</loc>
-    <lastmod>2017-08-30T03:28:39.645Z</lastmod>
+    <lastmod>2017-08-30T03:28:39.640Z</lastmod>
     <data>
         <display>
         <title>赢在今天</title>
@@ -99,11 +99,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -133,11 +133,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -167,11 +167,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -201,11 +201,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -1216,40 +1216,6 @@
 
     
   <url>
-    <loc>https://tianxinyou.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</loc>
-    <lastmod>2013-03-23T08:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>对实施项目的一些思考</title>
-        <pubTime>2013-03-23T08:00:00.000Z</pubTime>
-        
-        <tag>个人博客</tag>
-         
-        <tag>管理</tag>
-         
-        <tag>自我提升</tag>
-         
-        <tag>个人管理</tag>
-         
-        <tag>方法</tag>
-         
-        <tag>技巧</tag>
-         
-        <tag>团队管理</tag>
-         
-        <tag>工作方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="working" url="https://tianxinyou.github.io/categories/working/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://tianxinyou.github.io/2013/03/23/2013-3-23-When-the-monks-encountered-diamonds/</loc>
     <lastmod>2013-03-23T08:00:00.000Z</lastmod>
     <data>
@@ -1277,6 +1243,40 @@
            
              
               <breadCrumb title="financial" url="https://tianxinyou.github.io/categories/financial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tianxinyou.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</loc>
+    <lastmod>2013-03-23T08:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>对实施项目的一些思考</title>
+        <pubTime>2013-03-23T08:00:00.000Z</pubTime>
+        
+        <tag>个人博客</tag>
+         
+        <tag>管理</tag>
+         
+        <tag>自我提升</tag>
+         
+        <tag>个人管理</tag>
+         
+        <tag>方法</tag>
+         
+        <tag>技巧</tag>
+         
+        <tag>团队管理</tag>
+         
+        <tag>工作方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="working" url="https://tianxinyou.github.io/categories/working/"/>
           
         </display>
     </data>
@@ -1537,9 +1537,9 @@
          
         <tag>技巧</tag>
          
-        <tag>理念</tag>
-         
         <tag>团队管理</tag>
+         
+        <tag>理念</tag>
          
         <tag>工作方法</tag>
          
@@ -1573,9 +1573,9 @@
          
         <tag>技巧</tag>
          
-        <tag>理念</tag>
-         
         <tag>团队管理</tag>
+         
+        <tag>理念</tag>
          
          
            

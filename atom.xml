@@ -910,11 +910,11 @@
     
       <category term="学习" scheme="https://zhougf.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
       <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
     
       <category term="知识管理" scheme="https://zhougf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -1063,11 +1063,11 @@
     
       <category term="学习" scheme="https://zhougf.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
       <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
     
       <category term="知识管理" scheme="https://zhougf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -1608,11 +1608,11 @@
     
       <category term="学习" scheme="https://zhougf.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
       <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
     
       <category term="知识管理" scheme="https://zhougf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -1693,11 +1693,11 @@
     
       <category term="学习" scheme="https://zhougf.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
       <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
     
       <category term="知识管理" scheme="https://zhougf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="时间管理" scheme="https://zhougf.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -5780,110 +5780,6 @@
   </entry>
   
   <entry>
-    <title>对实施项目的一些思考</title>
-    <link href="https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/"/>
-    <id>https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</id>
-    <published>2013-03-23T08:00:00.000Z</published>
-    <updated>2013-03-23T08:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://docs.google.com/file/d/0B7UFT4BR96esSEozLWxIdEhzYnM/edit?usp=sharing" target="_blank" rel="external">下载思维导图文件</a></p>
-<h2 id="给你的导读"><a href="#给你的导读" class="headerlink" title="给你的导读"></a>给你的导读</h2><p>很多时候，我们会发现实施项目很简单，但是不好做，或者说做得不轻松。为什么呢？下面是我按照一般工作过程，对实施项目的一些思考和经验……</p>
-<h2 id="计划-P"><a href="#计划-P" class="headerlink" title="计划(P)"></a>计划(P)</h2><h6 id="一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。"><a href="#一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。" class="headerlink" title="一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。"></a>一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。</h6><h6 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h6><pre><code>计划不合理，怎么办？
-考虑不周全，怎么办？
-</code></pre><h6 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h6><pre><code>项目经理拟定初步计划，多部门与会讨论
-通过结果逆推实施的每一步
-</code></pre><h6 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h6><ul>
-<li><p>计划的每一项工作一定要具体到人</p>
-<p>  成果要求<br>  截止时间<br>  现有资源<br>  负责人<br>  执行人</p>
-</li>
-<li><p>“会议”是实施项目的“神器”</p>
-<p>  有人说，如果你懂得主持会议，那么项目实施你就会了一半了。可见“会议”对实施项目的重要性。</p>
-<p>  还有一半在哪里？</p>
-<ul>
-<li>跟踪控制</li>
-</ul>
-</li>
-</ul>
-<h2 id="执行-D"><a href="#执行-D" class="headerlink" title="执行(D)"></a>执行(D)</h2><h6 id="计划只有被很好地执行，才能体现计划的价值"><a href="#计划只有被很好地执行，才能体现计划的价值" class="headerlink" title="计划只有被很好地执行，才能体现计划的价值"></a>计划只有被很好地执行，才能体现计划的价值</h6><h6 id="执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理"><a href="#执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理" class="headerlink" title="执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理"></a>执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理</h6><h6 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h6><pre><code>执行人/负责人消极怠工，怎么办？
-执行人/负责人能力不够，怎么办？
-</code></pre><h6 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h6><ul>
-<li><p>找到消极怠工的原因，就好解决了</p>
-<p>  执行人/负责人对分派的工作意义，认识不够。与之深入沟通，解说其工作的意义<br>  通过行政要求，使执行人/负责人端正工作态度。“端人家碗受人家管。”</p>
-</li>
-<li><p>解决执行人/负责人能力不够，有三种办法</p>
-<p>  延长期限<br>  增加人员<br>  能力培训</p>
-</li>
-</ul>
-<h6 id="提醒-1"><a href="#提醒-1" class="headerlink" title="提醒"></a>提醒</h6><pre><code>在执行的过程中，项目经理一定要做好任务跟踪的工作。督促执行人完成工作，并随时处理突发情况
-</code></pre><h2 id="检查-C"><a href="#检查-C" class="headerlink" title="检查(C)"></a>检查(C)</h2><h6 id="其实就是控制和评定"><a href="#其实就是控制和评定" class="headerlink" title="其实就是控制和评定"></a>其实就是控制和评定</h6><h6 id="做好跟踪的同时，检查评定是必不可少的工作"><a href="#做好跟踪的同时，检查评定是必不可少的工作" class="headerlink" title="做好跟踪的同时，检查评定是必不可少的工作"></a>做好跟踪的同时，检查评定是必不可少的工作</h6><h6 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h6><pre><code>任务逾期了，怎么办？
-工作的成果不是预期的，怎么办？
-检查人不具备相关的能力，怎么办？
-</code></pre><h6 id="解决-2"><a href="#解决-2" class="headerlink" title="解决"></a>解决</h6><ul>
-<li><p>定期与不定期跟踪相结合，尽量避免逾期现象。如若发现可能会逾期，根据原因给予帮助，或调整计划</p>
-</li>
-<li><p>同样在执行的过程中，要定期和不定期的跟踪，防止成果出现偏差</p>
-<p>  执行人可能没有理解工作要求<br>  执行人能力不足，达不到要求</p>
-</li>
-<li><p>如果检查人不具备某能力，那么应该调动团队中有该能力的队员进行检查</p>
-</li>
-</ul>
-<h6 id="提醒-2"><a href="#提醒-2" class="headerlink" title="提醒"></a>提醒</h6><ul>
-<li><p>多方面验证/检查工作的执行情况</p>
-<p>  向负责人跟踪检查<br>  向执行人跟踪检查<br>  向执行人同事验证<br>  向执行人领导验证</p>
-</li>
-<li><p>及时把问题和建议反馈给执行人</p>
-</li>
-<li><p>定期把执行情况收集起来，提示给相关负责人</p>
-</li>
-</ul>
-<h2 id="修正-A"><a href="#修正-A" class="headerlink" title="修正(A)"></a>修正(A)</h2><h6 id="一个执行周期结束后，就现有情况，对工作计划进行调整"><a href="#一个执行周期结束后，就现有情况，对工作计划进行调整" class="headerlink" title="一个执行周期结束后，就现有情况，对工作计划进行调整"></a>一个执行周期结束后，就现有情况，对工作计划进行调整</h6><pre><code>调整工作任务
-调整时间结点
-调整人员安排
-</code></pre><h6 id="修正时，要将该执行周期出现的问题，放到下一执行周期改正"><a href="#修正时，要将该执行周期出现的问题，放到下一执行周期改正" class="headerlink" title="修正时，要将该执行周期出现的问题，放到下一执行周期改正"></a>修正时，要将该执行周期出现的问题，放到下一执行周期改正</h6><h6 id="问题-3"><a href="#问题-3" class="headerlink" title="问题"></a>问题</h6><pre><code>1、出现一大堆问题，却得不到解决，怎么办？
-2、修正会花费太大代价，但不修正又不行，怎么办？
-3、这个问题修正了，那个问题又出现了，怎么办？
-4、只知道赶进度，却忽视了质量，怎么办？
-</code></pre><h6 id="解决-3"><a href="#解决-3" class="headerlink" title="解决"></a>解决</h6><pre><code>问题1和2是同类问题。问题多，代价高，证明应该细化工作任务，缩短执行周期
-问题3和4关联性很密切。没有质量的项目，注定是失败的；同一问题重复出现，表明协调配合需加强
-</code></pre><h6 id="提醒-3"><a href="#提醒-3" class="headerlink" title="提醒"></a>提醒</h6><ul>
-<li><p>通过定期和不定期的会议，将项目相关的部门和人员联动起来，共同解决问题</p>
-</li>
-<li><p>项目三要素，此消彼长</p>
-<p>  成本<br>  进度<br>  质量</p>
-</li>
-</ul>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>看完了吗？你可以做实施项目经理了！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://docs.google.com/file/d/0B7UFT4BR96esSEozLWxIdEhzYnM/edit?usp=sharing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载思维导图文件&lt;/a&gt;&lt;/p&gt;
-&lt;h
-    
-    </summary>
-    
-      <category term="working" scheme="https://zhougf.github.io/categories/working/"/>
-    
-    
-      <category term="个人博客" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="管理" scheme="https://zhougf.github.io/tags/%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-      <category term="个人管理" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
-    
-      <category term="技巧" scheme="https://zhougf.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="工作方法" scheme="https://zhougf.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>当和尚遇到钻石</title>
     <link href="https://zhougf.github.io/2013/03/23/2013-3-23-When-the-monks-encountered-diamonds/"/>
     <id>https://zhougf.github.io/2013/03/23/2013-3-23-When-the-monks-encountered-diamonds/</id>
@@ -6065,6 +5961,110 @@ N种可能性
       <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
       <category term="理念" scheme="https://zhougf.github.io/tags/%E7%90%86%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对实施项目的一些思考</title>
+    <link href="https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/"/>
+    <id>https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</id>
+    <published>2013-03-23T08:00:00.000Z</published>
+    <updated>2013-03-23T08:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://docs.google.com/file/d/0B7UFT4BR96esSEozLWxIdEhzYnM/edit?usp=sharing" target="_blank" rel="external">下载思维导图文件</a></p>
+<h2 id="给你的导读"><a href="#给你的导读" class="headerlink" title="给你的导读"></a>给你的导读</h2><p>很多时候，我们会发现实施项目很简单，但是不好做，或者说做得不轻松。为什么呢？下面是我按照一般工作过程，对实施项目的一些思考和经验……</p>
+<h2 id="计划-P"><a href="#计划-P" class="headerlink" title="计划(P)"></a>计划(P)</h2><h6 id="一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。"><a href="#一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。" class="headerlink" title="一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。"></a>一般我们在开展一项工作时，首先是计划好该项工作的每一步骤或环节。这每一步骤都会有结果要求和时间限制。</h6><h6 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h6><pre><code>计划不合理，怎么办？
+考虑不周全，怎么办？
+</code></pre><h6 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h6><pre><code>项目经理拟定初步计划，多部门与会讨论
+通过结果逆推实施的每一步
+</code></pre><h6 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h6><ul>
+<li><p>计划的每一项工作一定要具体到人</p>
+<p>  成果要求<br>  截止时间<br>  现有资源<br>  负责人<br>  执行人</p>
+</li>
+<li><p>“会议”是实施项目的“神器”</p>
+<p>  有人说，如果你懂得主持会议，那么项目实施你就会了一半了。可见“会议”对实施项目的重要性。</p>
+<p>  还有一半在哪里？</p>
+<ul>
+<li>跟踪控制</li>
+</ul>
+</li>
+</ul>
+<h2 id="执行-D"><a href="#执行-D" class="headerlink" title="执行(D)"></a>执行(D)</h2><h6 id="计划只有被很好地执行，才能体现计划的价值"><a href="#计划只有被很好地执行，才能体现计划的价值" class="headerlink" title="计划只有被很好地执行，才能体现计划的价值"></a>计划只有被很好地执行，才能体现计划的价值</h6><h6 id="执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理"><a href="#执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理" class="headerlink" title="执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理"></a>执行不光是任务执行人的事情，更是负责人的事情，特别是项目经理</h6><h6 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h6><pre><code>执行人/负责人消极怠工，怎么办？
+执行人/负责人能力不够，怎么办？
+</code></pre><h6 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h6><ul>
+<li><p>找到消极怠工的原因，就好解决了</p>
+<p>  执行人/负责人对分派的工作意义，认识不够。与之深入沟通，解说其工作的意义<br>  通过行政要求，使执行人/负责人端正工作态度。“端人家碗受人家管。”</p>
+</li>
+<li><p>解决执行人/负责人能力不够，有三种办法</p>
+<p>  延长期限<br>  增加人员<br>  能力培训</p>
+</li>
+</ul>
+<h6 id="提醒-1"><a href="#提醒-1" class="headerlink" title="提醒"></a>提醒</h6><pre><code>在执行的过程中，项目经理一定要做好任务跟踪的工作。督促执行人完成工作，并随时处理突发情况
+</code></pre><h2 id="检查-C"><a href="#检查-C" class="headerlink" title="检查(C)"></a>检查(C)</h2><h6 id="其实就是控制和评定"><a href="#其实就是控制和评定" class="headerlink" title="其实就是控制和评定"></a>其实就是控制和评定</h6><h6 id="做好跟踪的同时，检查评定是必不可少的工作"><a href="#做好跟踪的同时，检查评定是必不可少的工作" class="headerlink" title="做好跟踪的同时，检查评定是必不可少的工作"></a>做好跟踪的同时，检查评定是必不可少的工作</h6><h6 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h6><pre><code>任务逾期了，怎么办？
+工作的成果不是预期的，怎么办？
+检查人不具备相关的能力，怎么办？
+</code></pre><h6 id="解决-2"><a href="#解决-2" class="headerlink" title="解决"></a>解决</h6><ul>
+<li><p>定期与不定期跟踪相结合，尽量避免逾期现象。如若发现可能会逾期，根据原因给予帮助，或调整计划</p>
+</li>
+<li><p>同样在执行的过程中，要定期和不定期的跟踪，防止成果出现偏差</p>
+<p>  执行人可能没有理解工作要求<br>  执行人能力不足，达不到要求</p>
+</li>
+<li><p>如果检查人不具备某能力，那么应该调动团队中有该能力的队员进行检查</p>
+</li>
+</ul>
+<h6 id="提醒-2"><a href="#提醒-2" class="headerlink" title="提醒"></a>提醒</h6><ul>
+<li><p>多方面验证/检查工作的执行情况</p>
+<p>  向负责人跟踪检查<br>  向执行人跟踪检查<br>  向执行人同事验证<br>  向执行人领导验证</p>
+</li>
+<li><p>及时把问题和建议反馈给执行人</p>
+</li>
+<li><p>定期把执行情况收集起来，提示给相关负责人</p>
+</li>
+</ul>
+<h2 id="修正-A"><a href="#修正-A" class="headerlink" title="修正(A)"></a>修正(A)</h2><h6 id="一个执行周期结束后，就现有情况，对工作计划进行调整"><a href="#一个执行周期结束后，就现有情况，对工作计划进行调整" class="headerlink" title="一个执行周期结束后，就现有情况，对工作计划进行调整"></a>一个执行周期结束后，就现有情况，对工作计划进行调整</h6><pre><code>调整工作任务
+调整时间结点
+调整人员安排
+</code></pre><h6 id="修正时，要将该执行周期出现的问题，放到下一执行周期改正"><a href="#修正时，要将该执行周期出现的问题，放到下一执行周期改正" class="headerlink" title="修正时，要将该执行周期出现的问题，放到下一执行周期改正"></a>修正时，要将该执行周期出现的问题，放到下一执行周期改正</h6><h6 id="问题-3"><a href="#问题-3" class="headerlink" title="问题"></a>问题</h6><pre><code>1、出现一大堆问题，却得不到解决，怎么办？
+2、修正会花费太大代价，但不修正又不行，怎么办？
+3、这个问题修正了，那个问题又出现了，怎么办？
+4、只知道赶进度，却忽视了质量，怎么办？
+</code></pre><h6 id="解决-3"><a href="#解决-3" class="headerlink" title="解决"></a>解决</h6><pre><code>问题1和2是同类问题。问题多，代价高，证明应该细化工作任务，缩短执行周期
+问题3和4关联性很密切。没有质量的项目，注定是失败的；同一问题重复出现，表明协调配合需加强
+</code></pre><h6 id="提醒-3"><a href="#提醒-3" class="headerlink" title="提醒"></a>提醒</h6><ul>
+<li><p>通过定期和不定期的会议，将项目相关的部门和人员联动起来，共同解决问题</p>
+</li>
+<li><p>项目三要素，此消彼长</p>
+<p>  成本<br>  进度<br>  质量</p>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>看完了吗？你可以做实施项目经理了！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://docs.google.com/file/d/0B7UFT4BR96esSEozLWxIdEhzYnM/edit?usp=sharing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载思维导图文件&lt;/a&gt;&lt;/p&gt;
+&lt;h
+    
+    </summary>
+    
+      <category term="working" scheme="https://zhougf.github.io/categories/working/"/>
+    
+    
+      <category term="个人博客" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="管理" scheme="https://zhougf.github.io/tags/%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+      <category term="个人管理" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="技巧" scheme="https://zhougf.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="团队管理" scheme="https://zhougf.github.io/tags/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="工作方法" scheme="https://zhougf.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
@@ -6344,11 +6344,11 @@ Steve Jobs
     
       <category term="个人博客" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
+      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
       <category term="使用说明" scheme="https://zhougf.github.io/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
     
       <category term="工具" scheme="https://zhougf.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
     
       <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
@@ -6747,11 +6747,11 @@ Host-only的条件下，VMWare在真正的Windows系统中，建立一块软网�
     
       <category term="个人博客" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
+      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
       <category term="使用说明" scheme="https://zhougf.github.io/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
     
       <category term="工具" scheme="https://zhougf.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
     
       <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
@@ -6879,11 +6879,11 @@ git rm -r dir1
     
       <category term="个人博客" scheme="https://zhougf.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
+      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
       <category term="使用说明" scheme="https://zhougf.github.io/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
     
       <category term="工具" scheme="https://zhougf.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="自我提升" scheme="https://zhougf.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
     
       <category term="方法" scheme="https://zhougf.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
@@ -9267,7 +9267,7 @@ Reference示例：![替代文本][pic]
 HTML示例：&lt;img src=&quot;/assets/images/jian.jpg&quot; alt=&quot;替代文本&quot; title=&quot;标题文本&quot; width=&quot;200&quot; /&gt;
 </code></pre><h4 id="效果：-7"><a href="#效果：-7" class="headerlink" title="效果："></a>效果：</h4><p><img src="/blogImages/20121231Examples-of-markdown-grammar/jian.jpg" alt="替代文本" title="标题文本" width="200"></p>
 <hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x74;&#101;&#115;&#116;&#64;&#x64;&#111;&#x6d;&#97;&#105;&#110;&#46;&#99;&#x6f;&#109;">&#x74;&#101;&#115;&#116;&#64;&#x64;&#111;&#x6d;&#97;&#105;&#110;&#46;&#99;&#x6f;&#109;</a>。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#116;&#x65;&#115;&#116;&#64;&#100;&#111;&#109;&#x61;&#105;&#x6e;&#x2e;&#99;&#111;&#x6d;">&#116;&#x65;&#115;&#116;&#64;&#100;&#111;&#109;&#x61;&#105;&#x6e;&#x2e;&#99;&#111;&#x6d;</a>。</p>
 <h4 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h4><p>在一行中使用三个或三个以上的<code>*</code>、<code>-</code>或<code>_</code>可以添加分隔线，其中可以有空白，但是不能有其他字符。</p>
 <h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>Markdown中的转义字符为<code>\</code>，可以转义的有：</p>
 <ul><br><li>\ 反斜杠</li><br><li>` 反引号</li><br><li>* 星号</li><br><li>_ 下划线</li><br><li>{} 大括号</li><br><li>[] 中括号</li><br><li>() 小括号</li><br><li># 井号</li><br><li>+ 加号</li><br><li>- 减号</li><br><li>. 英文句号</li><br><li>! 感叹号</li><br></ul>
@@ -9811,7 +9811,7 @@ id可以放在文章任意地方(建议放在末尾)，方括号把id括起来+�
 </li>
 </ul>
 <h1 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h1><ul>
-<li>网站链接/邮件地址，用尖括号括起来，例如：<a href="https://drive.google.com" target="_blank" rel="external">https://drive.google.com</a> <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x61;&#109;&#x72;&#97;&#105;&#110;&#104;&#97;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x73;&#x61;&#109;&#x72;&#97;&#105;&#110;&#104;&#97;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
+<li>网站链接/邮件地址，用尖括号括起来，例如：<a href="https://drive.google.com" target="_blank" rel="external">https://drive.google.com</a> <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#97;&#x6d;&#x72;&#97;&#105;&#x6e;&#104;&#x61;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#97;&#x6d;&#x72;&#97;&#105;&#x6e;&#104;&#x61;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 <h1 id="用反斜杠来插入特殊符号"><a href="#用反斜杠来插入特殊符号" class="headerlink" title="用反斜杠来插入特殊符号"></a>用反斜杠来插入特殊符号</h1><pre>
 \   反斜線

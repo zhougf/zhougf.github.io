@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://zhougf.github.io/2019/07/04/about/</loc>
-    <lastmod>2018-04-12T15:08:45.130Z</lastmod>
+    <lastmod>2019-09-11T14:56:46.663Z</lastmod>
     <data>
         <display>
         <title>谢谢打赏</title>
@@ -99,11 +99,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -133,11 +133,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -167,11 +167,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -201,11 +201,11 @@
          
         <tag>学习</tag>
          
-        <tag>时间管理</tag>
-         
         <tag>团队管理</tag>
          
         <tag>知识管理</tag>
+         
+        <tag>时间管理</tag>
          
          
            
@@ -1216,40 +1216,6 @@
 
     
   <url>
-    <loc>https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</loc>
-    <lastmod>2013-03-23T08:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>对实施项目的一些思考</title>
-        <pubTime>2013-03-23T08:00:00.000Z</pubTime>
-        
-        <tag>个人博客</tag>
-         
-        <tag>管理</tag>
-         
-        <tag>自我提升</tag>
-         
-        <tag>个人管理</tag>
-         
-        <tag>方法</tag>
-         
-        <tag>技巧</tag>
-         
-        <tag>团队管理</tag>
-         
-        <tag>工作方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="working" url="https://zhougf.github.io/categories/working/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://zhougf.github.io/2013/03/23/2013-3-23-When-the-monks-encountered-diamonds/</loc>
     <lastmod>2013-03-23T08:00:00.000Z</lastmod>
     <data>
@@ -1277,6 +1243,40 @@
            
              
               <breadCrumb title="financial" url="https://zhougf.github.io/categories/financial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://zhougf.github.io/2013/03/23/2013-3-30-Some-Thoughts-on-the-implementation-of-projects/</loc>
+    <lastmod>2013-03-23T08:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>对实施项目的一些思考</title>
+        <pubTime>2013-03-23T08:00:00.000Z</pubTime>
+        
+        <tag>个人博客</tag>
+         
+        <tag>管理</tag>
+         
+        <tag>自我提升</tag>
+         
+        <tag>个人管理</tag>
+         
+        <tag>方法</tag>
+         
+        <tag>技巧</tag>
+         
+        <tag>团队管理</tag>
+         
+        <tag>工作方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="working" url="https://zhougf.github.io/categories/working/"/>
           
         </display>
     </data>
